@@ -1,0 +1,140 @@
+/* 
+  Licensed under MIT
+  SPDX-License-Identifier: MIT
+  ESP8266 WiFi Setup with Captive Portal Example
+  © 2025 Lennart Gutjahr 
+*/
+
+:root {
+  --accent: #fff; /* Main accent color (was green, now white) */
+  --accent-dark: #e0e0e0; /* Slightly darker accent for hover/focus */
+  --bg: #101010; /* Page background color */
+  --card-bg: #181818; /* Card background color */
+  --text: #f2f2f2; /* Main text color */
+  --buttonText: #101010; /* Button text color (dark for contrast on white) */
+  --input-bg: #232323; /* Input field background */
+  --border: #222; /* Border color for inputs */
+  --shadow: 0 4px 24px 0 rgba(0,0,0,0.35); /* Card shadow */
+}
+
+* {
+  box-sizing: border-box; /* Include padding and border in element's total width/height */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: var(--bg); /* Use background variable */
+  color: var(--text); /* Use text color variable */
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 100%;
+  max-width: 380px;
+  margin: 3rem 0 1rem 0;
+  background: var(--card-bg); /* Card background */
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent); /* White heading */
+}
+
+h2 {
+  margin: 0.2em 0 0 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--accent-dark); /* Slightly darker for subheading */
+  letter-spacing: 0.04em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--accent); /* White labels */
+  margin-bottom: 0.1rem;
+}
+
+input, select {
+  padding: 0.7rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: var(--input-bg); /* Dark input background */
+  color: var(--text); /* Light text */
+  font-size: 1rem;
+  transition: border 0.2s, background 0.2s;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: var(--accent); /* White border on focus */
+  background: #232f23; /* Slightly lighter background on focus */
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.85rem 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  background: var(--accent); /* White button */
+  color: var(--buttonText); /* Dark text for contrast */
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px 0 rgba(76,175,80,0.08);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover, button:focus {
+  background: var(--accent-dark); /* Slightly darker on hover/focus */
+  transform: translateY(-2px) scale(1.02);
+}
+
+#status {
+  min-height: 1.5rem;
+  font-size: 0.98rem;
+  color: var(--accent); /* Status text in white */
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+footer {
+  margin-top: 1.5rem;
+  font-size: 0.92rem;
+  color: var(--accent-dark); /* Footer in lighter color */
+  opacity: 0.7;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
